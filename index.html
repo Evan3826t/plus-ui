@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./js/jquery-3.4.1.min.js"></script>
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+</head>
+<style>
+    .swiper {
+        height: 90vh;
+    }
+
+    .sticky {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 20;
+        height: 55px;
+    }
+
+    input[type="text"] {
+        background-color: black;
+        border:none;
+    }
+    input {
+        color: white;
+        background-color: #D69F72;
+        border:none;
+        padding: 5px;
+        font-size: 25px;
+        padding-right: 60px;
+        padding-left: 60px;
+        border-radius: 30px;
+    }
+    .message {
+        background-color: black;
+        border:none;
+    }
+
+    .navbg {
+        background-color: rgba(0, 0, 0, 0.7);
+    }
+    .top-navbg {
+        padding-top: 55px;
+        background-color: black;
+    }
+
+    .detial {
+        color: #D69F72;
+        background-color: #0A0E14;
+    }
+    .footer {
+        background-color: black;
+        color: #D69F72;
+        font-size: 25px;
+        padding-top: 75px;
+        padding-bottom: 75px;
+    }
+    .icon {
+        width: 25px;
+        height: 25px;
+    }
+
+    /* 大於 600 */
+    @media screen and (min-width: 600px) {
+        .logo {
+            width: 77px;
+            height: 50px;
+        }
+        .grades {
+            height: 475px;
+            width: 380px;
+        }
+        .mainType {
+        background-image: url(./type/底圖_白色大理石_調白.jpg);
+        height: 475px;
+        background-repeat: no-repeat;
+        background-size: cover;
+        }
+        .typeImage {
+        height: 203px
+    }
+    .mainTypePadding {
+        padding-top: 136px
+    }
+        .skill {
+            width:200px; 
+            height:200px;
+            margin-bottom: 75px"
+        }
+        .img_3c {
+            height: 350px;
+            width: 350px;
+        }
+        .inputtop {
+            padding-bottom: 75px;
+        }
+        .inputText {
+            text-align: right;
+            padding-bottom: 60px;
+        }
+        .inputPadding {
+        padding-bottom: 60px;
+    }
+    }
+
+    /* 小於 600 */
+    @media screen and (max-width: 600px) {
+        .logo {
+            width: 41px;
+            height: 27px;
+        }
+        .grades {
+            height: 225px;
+            width: 180px;
+        }
+        .typeImage {
+        height: 65px
+    }
+    .mainType {
+        background-image: url(./type/底圖_白色大理石_調白.jpg);
+        height: 130px;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    .mainTypePadding {
+        padding-top: 35px
+    }
+        .skill {
+            width:50px; 
+            height:50px;
+            margin-bottom: 75px"
+        }
+        .img_3c {
+            height: 160px;
+            width: 160px;
+        }
+        .inputtop {
+            padding-bottom: 36px;
+        }
+        .inputText {
+            padding-bottom: 12px;
+        }
+        .inputPadding {
+        padding-bottom: 27px;
+    }
+    }
+</style>
+
+<body>
+    <div class="top-navbg"></div>
+    <nav class="navbar navbar-expand-lg navbar-light sticky navbg text-light">
+        <a class="navbar-brand text-light" href="#"><img class="logo" src="./uploads/icon/思微LOGO.png" alt=""></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+            aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                    <a class="nav-link text-light" href="#">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-light" href="#">Features</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-light" href="#">Pricing</a>
+                </li>
+                <li class="nav-item dropdown ">
+                    <a class="nav-link dropdown-toggle text-light" href="#" id="navbarDropdownMenuLink" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Dropdown link
+                    </a>
+                    <div class="dropdown-menu text-light bg-dark" aria-labelledby="navbarDropdownMenuLink">
+                        <a class="dropdown-item bg-dark text-light" href="#">Action</a>
+                        <a class="dropdown-item bg-dark text-light" href="#">Another action</a>
+                        <a class="dropdown-item bg-dark text-light" href="#">Something else here</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div id="carouselExampleControls" class="carousel slide" data-ride="carousel ">
+        <div class="carousel-inner ">
+            <div class="carousel-item active swiper">
+                <img src="./uploads/slide/1-1.jpg" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item swiper">
+                <img src="./uploads/slide/2.jpg" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item swiper">
+                <img src="./uploads/slide/3.jpg" class="d-block w-100" alt="...">
+            </div>
+        </div>
+        <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
+    </div>
+    <div class="row m-0 p-0">
+        <div class="col-6 col-lg-3 p-0"><img src="./uploads/title/1.jpg" class="grades" alt=""></div>
+        <div class="col-6 col-lg-3 p-0"><img src="./uploads/title/2.jpg" class="grades" alt=""></div>
+        <div class="col-6 col-lg-3 p-0"><img src="./uploads/title/3.jpg" class="grades" alt=""></div>
+        <div class="col-6 col-lg-3 p-0"><img src="./uploads/title/4.jpg" class="grades" alt=""></div>
+    </div>
+    <div class="bg-dark text-center" style="color:#D69F72;">
+        <h2 style="padding-top: 160px;">我們是<span style="font-weight: bold; font-size: 40px;">專業</span>的工業設計公司</h2>
+        <h2>可以兼顧以下<span style="font-weight: bold; font-size: 40px;">設計</span>三要素</h2>
+        <h2 style="padding-bottom: 160px;">為您打造<span style="font-weight: bold; font-size: 40px;">高銷售量</span>爆款產品</h2>
+        <div class="container" style="padding-bottom: 160px;">
+            <div class="row ">
+                <div class="col-4">
+                    <img class="rounded skill" src="Anchor/洞察市場需求.png" alt=""><br>
+                    <h3 style="margin-bottom: 60px;">降低量產成本</h3>
+                    <div>1.減少模具數量</div>
+                    <div>2.保證量產</div>
+                    <div>只有現有技術</div>
+                    <div>3.增加模去使用壽命</div>
+                    <div>4.提高產品良率</div>
+                    <div>5.少模具</div>
+                    <div>創造出多式樣產品</div>
+                    <div>6.減少後加工段數</div>
+                    <div>髮絲 . 噴砂 . 陽極</div>
+                    <div>粉烤 . 液漆</div>
+                </div>
+                <div class="col-4">
+                    <img class="rounded skill" src="Anchor/降低量產成本.png" alt=""><br>
+                    <h3 style="margin-bottom: 60px;">優美獨特外型</h3>
+                    <div>1.美 = 熟悉 + 驚喜</div>
+                    <div>2.目標族群定義</div>
+                    <div>3.知名品牌設計語意</div>
+                    <div>4.市場主流造型風格</div>
+                    <div>5.材質搭配</div>
+                    <div>6.色彩計畫</div>
+                </div>
+                <div class="col-4">
+                    <img class="rounded skill" src="Anchor/優美獨特外型.png" alt=""><br>
+                    <h3 style="margin-bottom: 60px;">洞察市場需求</h3>
+                    <div>1.定義：剛剛好的功能</div>
+                    <div>2.使用體驗優化</div>
+                    <div>3.使用場景定義</div>
+                    <div>4.市場趨勢洞察</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="mainType">
+        <div class="container mainTypePadding">
+            <div class="row">
+                <div class="col-3">
+                    <img src="./type/3C_黑.png" class="typeImage rounded mx-auto d-block" alt="3C">
+                </div>
+                <div class="col-3"><img src="./type/生活_黑.png" class="typeImage rounded mx-auto d-block" alt="3C"></div>
+                <div class="col-3"><img src="./type/奢華_黑.png" class="typeImage rounded mx-auto d-block" alt="3C"></div>
+                <div class="col-3"><img src="./type/策略_黑.png" class="typeImage rounded mx-auto d-block" alt="3C"></div>
+            </div>
+        </div>
+    </div>
+    <div class="3cType">
+        <div class="container mt-4">
+            <h2>3C產品</h2>
+            <div class="row">
+                <div class="col-6 col-lg-4 mb-2"><img class="img_3c rounded mx-auto d-block" src="./3C/手機保護殼.png"
+                        alt=""></div>
+                <div class="col-6 col-lg-4 mb-2"><img class="img_3c rounded mx-auto d-block" src="./3C/滑鼠.png" alt="">
+                </div>
+                <div class="col-6 col-lg-4 mb-2"><img class="img_3c rounded mx-auto d-block" src="./3C/空氣濾淨器.png"
+                        alt=""></div>
+                <div class="col-6 col-lg-4 mb-2"><img class="img_3c rounded mx-auto d-block" src="./3C/筋膜槍.png" alt="">
+                </div>
+                <div class="col-6 col-lg-4 mb-2"><img class="img_3c rounded mx-auto d-block" src="./3C/電腦機殼.png" alt="">
+                </div>
+                <div class="col-6 col-lg-4 mb-2"><img class="img_3c rounded mx-auto d-block"
+                        src="./3C/頸戴360攝影機_icon.png" alt=""></div>
+            </div>
+        </div>
+    </div>
+    <div class="detial">
+        <div class="container" style="padding-top: 100px;">
+            <div class="row">
+                <div class="col-12 text-center inputtop">若想要更進一步的免費諮詢，歡迎您留下資訊，我們會有專業的顧問，與您聯絡。</div>
+                <div class="col-lg-2 inputText">Name </div>
+                <div class="inputPadding col-lg-4"><input type="text" class="form-control" name="Name" id="Name" ></div>
+                <div class="col-lg-2 inputText">Phone </div>
+                <div class="inputPadding col-lg-4"><input type="text" class="form-control" name="Phone" id="Phone"></div>
+                <div class="col-lg-2 inputText">Country </div>
+                <div class="inputPadding col-lg-4"><input type="text" class="form-control" name="Country" id="Country"></div>
+                <div class="col-lg-2 inputText">Mail </div>
+                <div class="inputPadding col-lg-4"><input type="text" class="form-control" name="Mail" id="Mail"></div>
+                <div class="col-lg-2 inputText">Message</div>
+                <div class="inputPadding col-lg-10"><textarea class="form-control message" id="message" rows="3"></textarea></div>
+                <div class="col-12 text-center" style="padding-bottom: 75px;"><input type="submit" value="Submit"></div>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-lg-3"><img src="./uploads/icon/icon-phone.png" class="icon" alt=""> 886 975 862 657</div>
+                <div class="col-12 col-lg-4"><img src="./uploads/icon/icon-mail.png" class="icon" alt=""> iian@svplusdesign.com</div>
+                <div class="col-12 col-lg-2"><img src="./uploads/icon/icon-line.png" class="icon" alt=""> iiandesign</div>
+                <div class="col-12 col-lg-3"><img src="./uploads/icon/icon-chat.png" class="icon" alt=""> iiandesign</div>
+                <div class="col-12"><img src="./uploads/icon/icon-map.png" class="icon" alt=""> 3F., No.46, Yixian Rd., Xinyi Dist., Taipei  Dist., Taipei City 104, Taiwan ( R.O.C.)</div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
