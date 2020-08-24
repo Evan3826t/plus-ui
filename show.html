@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./js/jquery-3.4.1.min.js"></script>
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+</head>
+<style>
+    .sticky {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 20;
+        height: 55px;
+    }
+body {
+    
+word-break: break-all;/*必須*/
+
+}
+    input[type="text"] {
+        background-color: black;
+        border: none;
+    }
+
+    input {
+        color: white;
+        background-color: #D69F72;
+        border: none;
+        padding: 5px;
+        font-size: 25px;
+        padding-right: 60px;
+        padding-left: 60px;
+        border-radius: 30px;
+    }
+
+    .navbg {
+        background-color: rgba(0, 0, 0, 0.7);
+    }
+
+    .top-navbg {
+        padding-top: 55px;
+        background-color: black;
+    }
+
+    .detial {
+        color: #D69F72;
+        background-color: #0A0E14;
+    }
+
+    .footer {
+        background-color: black;
+        color: #D69F72;
+        font-size: 25px;
+        padding-top: 75px;
+        padding-bottom: 75px;
+    }
+    .icon {
+        width: 25px;
+        height: 25px;
+    }
+    .topimg {
+        width: 100%;
+        height: 95vh;
+    }
+    /* 大於 600 */
+    @media screen and (min-width: 600px) {
+        .logo {
+            width: 77px;
+            height: 50px;
+        }
+        .inputtop {
+            padding-bottom: 75px;
+            font-size: 32px;
+        }
+
+        .inputText {
+            text-align: right;
+            padding-bottom: 60px;
+        }
+
+        .inputPadding {
+            padding-bottom: 60px;
+        }
+    }
+
+    /* 小於 600 */
+    @media screen and (max-width: 600px) {
+        .logo {
+            width: 41px;
+            height: 27px;
+        }
+
+        .inputtop {
+            padding-bottom: 36px;
+            font-size: 40px;
+
+        }
+
+        .inputText {
+            padding-bottom: 12px;
+        }
+
+        .inputPadding {
+            padding-bottom: 27px;
+        }
+    }
+</style>
+<body>
+    <div class="top-navbg"></div>
+    <nav class="navbar navbar-expand-lg navbar-light sticky navbg text-light">
+        <div class="container">
+        <a class="navbar-brand text-light" href="#"><img class="logo" src="./uploads/icon/思微LOGO.png" alt=""></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+            aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                    <a class="nav-link text-light" href="#">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-light" href="#">Features</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-light" href="#">Pricing</a>
+                </li>
+                <li class="nav-item dropdown ">
+                    <a class="nav-link dropdown-toggle text-light" href="#" id="navbarDropdownMenuLink" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Dropdown link
+                    </a>
+                    <div class="dropdown-menu text-light bg-dark" aria-labelledby="navbarDropdownMenuLink">
+                        <a class="dropdown-item bg-dark text-light" href="#">Action</a>
+                        <a class="dropdown-item bg-dark text-light" href="#">Another action</a>
+                        <a class="dropdown-item bg-dark text-light" href="#">Something else here</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    </nav>
+    <img class="topimg" src="./uploads/works/Sketch.jpg" alt="">
+    <div class="works">
+        <div class="row">
+            <div class="col-lg-8 col-12 bg-dark" style="height: 350px;"></div>
+            <div class="col-lg-4 col-12">44654654</div>
+            
+            <div class="col-lg-6 col-12 bg-success" style="height: 350px;"></div>
+            <div class="col-lg-6 col-12 bg-info" style="height: 350px;"></div>
+            
+            <div class="col-lg-4 col-12 bg-primary" style="height: 350px;"></div>
+            <div class="col-lg-8 col-12">44654654</div>
+        </div>
+    </div>
+    <div class="more mt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-lg-12 text-center"><h3>< 延伸閱讀 ></h3></div>
+                <div class="col-lg-6">
+                    <img class="rounded mx-auto d-block" src="./uploads/works/Sketch.jpg" alt="">
+                    <h3 class="text-center">title</h3>
+                    <div class="text-center">contentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontent</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="detial">
+        <div class="container" style="padding-top: 100px;">
+            <div class="row">
+                <div class="col-12 text-center inputtop">訂閱電子報 : 想獲取最新的產品開發知識嗎 ? 我們將第一時間 , 發到您的信箱 .</div>
+                <div class="col-lg-2 inputText">Name </div>
+                <div class="inputPadding col-lg-4"><input type="text" class="form-control" name="Name" id="Name"></div>
+                <div class="col-lg-2 inputText">Mail </div>
+                <div class="inputPadding col-lg-4"><input type="text" class="form-control" name="Mail" id="Mail"></div>
+                <div class="col-12 text-center" style="padding-bottom: 75px;"><input type="submit" value="Submit"></div>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-lg-3"><img src="./uploads/icon/icon-phone.png" class="icon" alt=""> 886 975 862
+                    657</div>
+                <div class="col-12 col-lg-4"><img src="./uploads/icon/icon-mail.png" class="icon" alt="">
+                    iian@svplusdesign.com</div>
+                <div class="col-12 col-lg-2"><img src="./uploads/icon/icon-line.png" class="icon" alt=""> iiandesign
+                </div>
+                <div class="col-12 col-lg-3"><img src="./uploads/icon/icon-chat.png" class="icon" alt=""> iiandesign
+                </div>
+                <div class="col-12"><img src="./uploads/icon/icon-map.png" class="icon" alt=""> 3F., No.46, Yixian Rd.,
+                    Xinyi Dist., Taipei Dist., Taipei City 104, Taiwan ( R.O.C.)</div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
