@@ -67,12 +67,31 @@ word-break: break-all;/*必須*/
         width: 100%;
         height: 95vh;
     }
+    
+    .morebtn {
+        margin-top: 50px;
+        margin-bottom: 50px;
+        text-align: center;
+    }
+    .morebtn > button {
+        color: white;
+        border: none;
+        padding: 5px;
+        font-size: 25px;
+        padding-right: 60px;
+        padding-left: 60px;
+        border-radius: 30px;
+    }
     /* 大於 600 */
     @media screen and (min-width: 600px) {
         .logo {
             width: 77px;
             height: 50px;
         }
+        .moreimg {
+        width: 500px;
+        height: 325px;
+    }
         .inputtop {
             padding-bottom: 75px;
             font-size: 32px;
@@ -94,7 +113,10 @@ word-break: break-all;/*必須*/
             width: 41px;
             height: 27px;
         }
-
+        .moreimg {
+        width: 325px;
+        height: 211px;
+    }
         .inputtop {
             padding-bottom: 36px;
             font-size: 40px;
@@ -163,9 +185,19 @@ word-break: break-all;/*必須*/
             <div class="row">
                 <div class="col-12 col-lg-12 text-center"><h3>< 延伸閱讀 ></h3></div>
                 <div class="col-lg-6">
-                    <img class="rounded mx-auto d-block" src="./uploads/works/Sketch.jpg" alt="">
-                    <h3 class="text-center">title</h3>
-                    <div class="text-center">contentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontent</div>
+                    <img class="rounded mx-auto d-block moreimg" src="./uploads/works/Sketch.jpg" alt="">
+                    <h3 class="pl-3">title</h3>
+                    <div class="pl-3">contentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontent</div>
+                </div>
+                <div class="col-lg-6">
+                    <img class="rounded mx-auto d-block moreimg" src="./uploads/works/Sketch.jpg" alt="">
+                    <h3 class="pl-3">title</h3>
+                    <div class="pl-3">contentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontent</div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="morebtn" ><button style="background-color: #0092FF;">分享至臉書</button></div>
+                    <div class="morebtn" ><button style="background-color: #D69F72;">看看我們的設計案例</button></div>
+
                 </div>
             </div>
         </div>
