@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <!-- FontAwesome CSS -->
+</head>
+
+<body>
+  <!-- section header -------------------------------------------->
+  <section id="header" class="inxBg">
+    <div id="navbar" class="fixed-top bg-dark">
+      <div id="navbarBg"></div>
+      <!-- cantainer -->
+      <div class="container">
+        <!-- navbar -->
+        <nav class="navbar navbar-expand-lg navbar-white">
+          <header class="navbar-brand" href="index.html">
+            <img  src="./uploads/icon/思微LOGO.png"  alt="" title="">
+              <a href="index.php"><img src="./uploads/toptitle/Home.png" class="toptitle" alt=""></a>
+              <a href="work.php"><img src="./uploads/toptitle/Works.png" class="toptitle" alt=""></a>
+              <a href="Blog.php"><img src="./uploads/toptitle/Blog.png" class="toptitle" alt=""></a>
+          </header>
+          <button class="navbar-toggler ml-auto" type="button" onclick="openNav()">
+            <span class="navbar-toggler-icon">123</span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto text-right">
+              <li class="nav-item">
+                <a class="nav-link active" href="2index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="2products.html">Product</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="2service.html">Service</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Contacts</a>
+              </li>
+              <li class="nav-item d-lg-none">
+                <a href="javascript:void(0)" class="nav-link closeBtn" onclick="closeNav()">&times;</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+        <!-- /navbar -->
+      </div>
+      <!-- /container -->
+    </div>
+    <!-- /cantainer -->
+  </section>
+  <!-- /section header -------------------------------------------->
+  <!-- inxPro -------------------------------------------->
+
+  <script src="js/jquery-3.3.1.slim.min.js"></script>
+  <script src="js/bootstrap.js"></script>
+  <!-- 滑動 -->
+  <script src="http://code.jquery.com/jquery-latest.js"></script>
+  <script>
+    // navbar背景
+    $(window).scroll(function () {
+      if ($(window).scrollTop() >= 30) {
+        $('#navbarBg')
+          .fadeIn()
+          .addClass('navbarBg');
+      } else {
+        $('#navbarBg').fadeOut();
+      }
+    });
+    // navbar button onclick open
+    function openNav() {
+      $("#navbarSupportedContent").addClass("sideNav");
+      $("#navbarSupportedContent").removeClass("collapse", "navbar-collapse");
+      setTimeout(function () {
+        $("#navbarSupportedContent").width(180);
+      }, 30);
+
+      if ($("#navbarSupportedContent").hasClass('sideNav')) {
+        $(document).click(function (e) {
+          var _con = $('.sideNav'); // 设置目标区域
+          if (!_con.is(e.target) && _con.has(e.target).length === 0) {
+            $("#navbarSupportedContent").width(0);
+          }
+        });
+      }
+    }
+    // navbar button onclick close
+    function closeNav() {
+      if ($(window).width() < 767) {}
+      $("#navbarSupportedContent").width(0);
+
+      setTimeout(function () {
+        $("#navbarSupportedContent").removeClass("sideNav");
+        $("#navbarSupportedContent").addClass("collapse", "navbar-collapse");
+      }, 500);
+
+    }
+    // navbar screen chang class
+    $(document).ready(function () {
+      $(window).resize(function () {
+        wdth = $(window).width();
+
+        if (wdth < 992) {
+          $("#navbarSupportedContent").removeClass("collapse", "navbar-collapse").addClass("sideNav");
+        } else {
+          closeNav();
+        }
+      });
+    });
+  </script>
+</body>
+
+</html>
