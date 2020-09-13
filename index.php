@@ -4,15 +4,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Xplus</title>
+    <title>Document</title>
     <script src="./js/jquery-3.4.1.min.js"></script>
     <script src="./js/bootstrap.bundle.min.js"></script>
     <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/style.css">
 </head>
 <style>
     .swiper {
-        height: 90vh;
+        height: 85vh;
     }
+
+
 
     input[type="text"] {
         background-color: black;
@@ -39,10 +42,7 @@
         background-color: rgba(0, 0, 0, 0.7);
     }
 
-    .top-navbg {
-        padding-top: 55px;
-        background-color: black;
-    }
+
 
     .detial {
         color: #D69F72;
@@ -95,17 +95,6 @@
             z-index: 20;
             height: 55px;
         }
-
-        .logo {
-            width: 77px;
-            height: 50px;
-        }
-
-        .toptitle {
-            height: 30px;
-            margin-right: 30px;
-        }
-
         .navbar-collapse {
             margin-left: -100px;
         }
@@ -208,17 +197,7 @@
             width: 100%;
             z-index: 20;
         }
-
-        .logo {
-            width: 41px;
-            height: 27px;
-        }
-
-        .toptitle {
-            height: 20px;
-            margin-right: 10px;
-        }
-
+    
         .grades {
             height: 225px;
             width: 50vw;
@@ -317,83 +296,87 @@
         }
     }
 </style>
-<?php
-include_once('base.php');
-$slides = all( 'slides', ['']);
-$width = "<script language=/'javascript/'>";     
-$width .= "document.write(window.screen.width);";     
-$width .= "</script>";
-echo $width;
-?>
-<body>
-    <div class="top-navbg"></div>
-    <nav class="navbar navbar-expand-lg navbar-light sticky navbg text-light">
-        <div class="container">
-            <div class="col-2 col-lg-4">
-                <a class="navbar-brand text-light" href="#"><img class="logo" src="./uploads/icon/思微LOGO.png" alt=""></a>
-            </div>
-            <div class="col-8 col-lg-4">
-                <a href="index.php"><img src="./uploads/toptitle/Home.png" class="toptitle" alt=""></a>
-                <a href="work.php"><img src="./uploads/toptitle/Works.png" class="toptitle" alt=""></a>
-                <a href="Blog.php"><img src="./uploads/toptitle/Blog.png" class="toptitle" alt=""></a>
-            </div>
 
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"><img src="./uploads/icon/漢堡.png" alt="" style="height: 30px;"></span>
-            </button>
-            <div class="collapse navbar-collapse col-lg-8" id="navbarNavDropdown">
-                <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <a href="Ebook.php"><img src="./uploads/toptitle/Ebook.png" class="toptitle" alt=""></a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="Customers.php"><img src="./uploads/toptitle/Customers.png" class="toptitle" alt=""></a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="About_us.php"><img src="./uploads/toptitle/About us.png" class="toptitle" alt=""></a>
-                    </li>
+<body>
+    <!-- navbar -->
+    <div class="top-navbg"></div>
+    <section id="header" class="inxBg">
+        <div id="navbar" class="fixed-top" style="background: rgba(0, 0, 0, 0.7);">
+          <div id="navbarBg"></div>
+          <!-- cantainer -->
+          <div class="container">
+            <!-- navbar -->
+            <nav class="navbar navbar-expand-lg navbar-white">
+              <header class="navbar-brand" href="index.html">
+                <div>
+                    <img  src="./uploads/icon/思微LOGO.png" class="logo" alt="" title="">
+                    <span class="navmobile ml-5">
+                        <a href="index.php"><img src="./uploads/toptitle/Home.png" class="toptitle" alt=""></a>
+                        <a href="work.php"><img src="./uploads/toptitle/Works.png" class="toptitle" alt=""></a>
+                        <a href="Blog.php"><img src="./uploads/toptitle/Blog.png" class="toptitle" alt=""></a>
+                    </span>
+                </div>
+              </header>
+              <button class="navbar-toggler ml-auto" type="button" onclick="openNav()">
+                <span class="navbar-toggler-icon"><img src="./uploads/icon/漢堡.png" width="30px"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav text-right">
+                  <li class="nav-item navmobilenon">
+                    <a active" href="2index.html"><img src="./uploads/toptitle/Home.png" class="toptitle" alt=""></a>
+                  </li>
+                  <li class="nav-item navmobilenon">
+                    <a  href="2products.html"><img src="./uploads/toptitle/Works.png" class="toptitle" alt=""></a>
+                  </li>
+                  <li class="nav-item navmobilenon">
+                    <a  href="2products.html"><img src="./uploads/toptitle/Blog.png" class="toptitle" alt=""></a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="2products.html"><img src="./uploads/toptitle/Ebook.png" class="toptitle" alt=""></a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="2service.html"><img src="./uploads/toptitle/Customers.png" class="toptitle" alt=""></a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="2service.html"><img src="./uploads/toptitle/About us.png" class="toptitle" alt=""></a>
+                  </li>
+                  <li class="nav-item d-lg-none">
+                    <a href="javascript:void(0)" class="nav-link closeBtn" onclick="closeNav()">&times;</a>
+                  </li>
                 </ul>
-            </div>
+              </div>
+            </nav>
+          </div>
         </div>
-    </nav>
+      </section>
+
+
+    <!-- swiper -->
     <div id="carouselExampleCaptions" class="carousel slide swiper" data-ride="carousel">
         <ol class="carousel-indicators">
-            <?php
-            foreach ($slides as $key => $slide) {
-                if ($key == 0) {
-            ?>
-                    <li data-target="#carouselExampleCaptions" data-slide-to="<?= $key ?>" class="active"></li>
-                <?php
-                } else {
-                ?>
-                    <li data-target="#carouselExampleCaptions" data-slide-to="<?= $key ?>"></li>
-            <?php
-                }
-            }
-            ?>
+            <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
+            <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
+            <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
         </ol>
         <div class="carousel-inner">
-            <?php
-            foreach ($slides as $key => $slide) {
-                if ($key == 0) {
-                ?>
-                    <div class="carousel-item active">
-                        <img src="./uploads/slide/1.jpg" class="d-block w-100 swiper" alt="...">
-                        <div class="carousel-caption d-none d-md-block">
-                        </div>
-                    </div> 
-                <?php
-                } else {
-                ?>
-                    <div class="carousel-item">
-                        <img src="./uploads/slide/2.jpg" class="d-block w-100 swiper" alt="...">
-                        <div class="carousel-caption d-none d-md-block">
-                        </div>
-                    </div> 
-                <?php
-                }
-            }
-            ?>
+            <div class="carousel-item active">
+                <picture>
+                    <source media="(max-width: 600px)" srcset="./uploads/slide/1-3.jpg">
+                    <source media="(min-width: 600px)" srcset="./uploads/slide/3.jpg">
+                    <img src="elva-800w.jpg" alt="Chris standing up holding his daughter Elva" style="width: 100%;height: 100%;object-fit: cover;" class="d-block w-100 swiper">
+                  </picture>
+               <div class="carousel-caption d-none d-md-block" >
+                </div>
+            </div>
+            <div class="carousel-item">
+                <picture>
+                    <source media="(max-width: 600px)" srcset="./uploads/slide/1-3.jpg">
+                    <source media="(min-width: 600px)" srcset="./uploads/slide/2.jpg">
+                    <img src="elva-800w.jpg" alt="Chris standing up holding his daughter Elva" class="d-block w-100 swiper">
+                  </picture>
+                <div class="carousel-caption d-none d-md-block" >
+                </div>
+            </div>
         </div>
         <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -467,16 +450,24 @@ echo $width;
         <div class="container mainTypePadding">
             <div class="row">
                 <div class="col-3">
-                    <img class="typeImage rounded mx-auto d-block" src="./uploads/type/3C_黑.png" onmouseover="this.src='./uploads/type/3C_藍.png'" onmouseout="this.src='./uploads/type/3C_黑.png'" border="0" alt="" />
+                    <img class="typeImage rounded mx-auto d-block" src="./uploads/type/3C_黑.png"
+                        onmouseover="this.src='./uploads/type/3C_藍.png'" onmouseout="this.src='./uploads/type/3C_黑.png'" border="0"
+                        alt="" />
                 </div>
                 <div class="col-3">
-                    <img class="typeImage rounded mx-auto d-block" src="./uploads/type/生活_黑.png" onmouseover="this.src='./uploads/type/生活_藍.png'" onmouseout="this.src='./uploads/type/生活_黑.png'" border="0" alt="" />
+                    <img class="typeImage rounded mx-auto d-block" src="./uploads/type/生活_黑.png"
+                        onmouseover="this.src='./uploads/type/生活_藍.png'" onmouseout="this.src='./uploads/type/生活_黑.png'" border="0"
+                        alt="" />
                 </div>
                 <div class="col-3">
-                    <img class="typeImage rounded mx-auto d-block" src="./uploads/type/奢華_黑.png" onmouseover="this.src='./uploads/type/奢華_藍.png'" onmouseout="this.src='./uploads/type/奢華_黑.png'" border="0" alt="" />
+                    <img class="typeImage rounded mx-auto d-block" src="./uploads/type/奢華_黑.png"
+                    onmouseover="this.src='./uploads/type/奢華_藍.png'" onmouseout="this.src='./uploads/type/奢華_黑.png'" border="0"
+                    alt="" />
                 </div>
                 <div class="col-3">
-                    <img class="typeImage rounded mx-auto d-block" src="./uploads/type/策略_黑.png" onmouseover="this.src='./uploads/type/策略_藍.png'" onmouseout="this.src='./uploads/type/策略_黑.png'" border="0" alt="" />
+                    <img class="typeImage rounded mx-auto d-block" src="./uploads/type/策略_黑.png"
+                    onmouseover="this.src='./uploads/type/策略_藍.png'" onmouseout="this.src='./uploads/type/策略_黑.png'" border="0"
+                    alt="" />
 
                 </div>
             </div>
@@ -486,15 +477,18 @@ echo $width;
         <div class="container mt-4">
             <h2>3C產品</h2>
             <div class="row">
-                <div class="col-6 col-lg-4 mb-2"><img class="img_3c rounded mx-auto d-block" src="./uploads/3C/手機保護殼.png" alt=""></div>
+                <div class="col-6 col-lg-4 mb-2"><img class="img_3c rounded mx-auto d-block" src="./uploads/3C/手機保護殼.png"
+                        alt=""></div>
                 <div class="col-6 col-lg-4 mb-2"><img class="img_3c rounded mx-auto d-block" src="./uploads/3C/滑鼠.png" alt="">
                 </div>
-                <div class="col-6 col-lg-4 mb-2"><img class="img_3c rounded mx-auto d-block" src="./uploads/3C/空氣濾淨器.png" alt=""></div>
+                <div class="col-6 col-lg-4 mb-2"><img class="img_3c rounded mx-auto d-block" src="./uploads/3C/空氣濾淨器.png"
+                        alt=""></div>
                 <div class="col-6 col-lg-4 mb-2"><img class="img_3c rounded mx-auto d-block" src="./uploads/3C/筋膜槍.png" alt="">
                 </div>
                 <div class="col-6 col-lg-4 mb-2"><img class="img_3c rounded mx-auto d-block" src="./uploads/3C/電腦機殼.png" alt="">
                 </div>
-                <div class="col-6 col-lg-4 mb-2"><img class="img_3c rounded mx-auto d-block" src="./uploads/3C/頸戴360攝影機_icon.png" alt=""></div>
+                <div class="col-6 col-lg-4 mb-2"><img class="img_3c rounded mx-auto d-block"
+                        src="./uploads/3C/頸戴360攝影機_icon.png" alt=""></div>
             </div>
         </div>
     </div>
@@ -513,7 +507,8 @@ echo $width;
                 <div class="col-lg-2 inputText"><img src="./uploads/detail/Mail.png" alt=""></div>
                 <div class="inputPadding col-lg-4"><input type="text" class="form-control" name="Mail" id="Mail"></div>
                 <div class="col-lg-2 inputText"><img src="./uploads/detail/Message.png" alt=""></div>
-                <div class="inputPadding col-lg-10"><textarea class="form-control message" id="message" rows="3"></textarea></div>
+                <div class="inputPadding col-lg-10"><textarea class="form-control message" id="message"
+                        rows="3"></textarea></div>
                 <div class="col-12 text-center" style="padding-bottom: 75px;"><input type="submit" value="Submit"></div>
             </div>
         </div>
@@ -536,5 +531,56 @@ echo $width;
         </div>
     </div>
 </body>
+<script>
+    // navbar背景
+    $(window).scroll(function () {
+      if ($(window).scrollTop() >= 30) {
+        $('#navbarBg')
+          .fadeIn()
+          .addClass('navbarBg');
+      } else {
+        $('#navbarBg').fadeOut();
+      }
+    });
+    // navbar button onclick open
+    function openNav() {
+      $("#navbarSupportedContent").addClass("sideNav");
+      $("#navbarSupportedContent").removeClass("collapse", "navbar-collapse");
+      setTimeout(function () {
+        $("#navbarSupportedContent").width(180);
+      }, 30);
 
+      if ($("#navbarSupportedContent").hasClass('sideNav')) {
+        $(document).click(function (e) {
+          var _con = $('.sideNav'); // 设置目标区域
+          if (!_con.is(e.target) && _con.has(e.target).length === 0) {
+            $("#navbarSupportedContent").width(0);
+          }
+        });
+      }
+    }
+    // navbar button onclick close
+    function closeNav() {
+      if ($(window).width() < 767) {}
+      $("#navbarSupportedContent").width(0);
+
+      setTimeout(function () {
+        $("#navbarSupportedContent").removeClass("sideNav");
+        $("#navbarSupportedContent").addClass("collapse", "navbar-collapse");
+      }, 500);
+
+    }
+    // navbar screen chang class
+    $(document).ready(function () {
+      $(window).resize(function () {
+        wdth = $(window).width();
+
+        if (wdth < 992) {
+          $("#navbarSupportedContent").removeClass("collapse", "navbar-collapse").addClass("sideNav");
+        } else {
+          closeNav();
+        }
+      });
+    });
+  </script>
 </html>
