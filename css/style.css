@@ -42,8 +42,8 @@
     font-size: 2.5rem !important;
     line-height: 1.2rem;
     font-weight: normal !important;
-    margin-left: 50px;
     transition: 0.3s;
+    text-align: center;
 }
 
 

@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./js/jquery-3.4.1.min.js"></script>
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" target="_blank" href="./css/style.css">
+    <link rel="stylesheet" target="_blank" href="./css/bootstrap.min.css">
+</head>
+<style>
+    body {
+        word-break: break-all;
+        /*必須*/
+    }
+    .backdrop {
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: 1040;
+        background-color: rgba(0, 0, 0, 0.9);
+    }
+    .backnon {
+        display: none !important;
+    }
+    .isNon {
+        border: 1px solid red !important;
+    }
+
+    input[type="text"] {
+        background-color: black;
+        border: none;
+    }
+
+    input {
+        color: white;
+        background-color: #D69F72;
+        border: none;
+        padding: 5px;
+        font-size: 25px;
+        padding-right: 60px;
+        padding-left: 60px;
+        border-radius: 30px;
+    }
+
+    .navbg {
+        background-color: rgba(0, 0, 0, 0.7);
+    }
+
+    .detial {
+        color: #D69F72;
+        background-color: #0A0E14;
+    }
+
+    .footer {
+        background-color: black;
+        color: #D69F72;
+        font-size: 25px;
+        padding-top: 75px;
+        padding-bottom: 75px;
+    }
+    .inputText>img {
+        height: 30px;
+    }
+
+    .icon {
+        width: 25px;
+        height: 25px;
+    }
+
+    .topimg {
+        width: 100%;
+        height: 95vh;
+    }
+
+    .morebtn {
+        margin-top: 50px;
+        margin-bottom: 50px;
+        text-align: center;
+    }
+
+    .morebtn>button {
+        color: white;
+        border: none;
+        padding: 5px;
+        font-size: 25px;
+        padding-right: 60px;
+        padding-left: 60px;
+        border-radius: 30px;
+    }
+
+    /* 大於 600 */
+    @media screen and (min-width: 600px) {
+        .moreimg {
+            width: 500px;
+            height: 325px;
+        }
+
+        .inputtop {
+            padding-bottom: 75px;
+            font-size: 32px;
+        }
+
+        .inputText {
+            text-align: right;
+            padding-bottom: 60px;
+        }
+
+        .inputPadding {
+            padding-bottom: 60px;
+        }
+    }
+
+    /* 小於 600 */
+    @media screen and (max-width: 600px) {
+        .logo {
+            width: 41px;
+            height: 27px;
+        }
+
+        .moreimg {
+            width: 325px;
+            height: 211px;
+        }
+
+        .inputtop {
+            padding-bottom: 36px;
+            font-size: 40px;
+
+        }
+
+        .inputText {
+            padding-bottom: 12px;
+        }
+
+        .inputPadding {
+            padding-bottom: 27px;
+        }
+    }
+</style>
+
+<body>
+    <div class="backdrop d-flex justify-content-center align-items-center backnon"><img class="rounded" src="./uploads/detail/thank you.png" alt="" height="100px"></div>
+
+    <div class="top-navbg"></div>
+    <section id="header" class="inxBg">
+        <div id="navbar" class="fixed-top" style="background: rgba(0, 0, 0, 0.7);">
+            <div id="navbarBg"></div>
+            <!-- cantainer -->
+            <div class="container">
+                <!-- navbar -->
+                <nav class="navbar navbar-expand-lg navbar-white">
+                    <header class="navbar-brand" target="_blank" href="index.html">
+                        <div>
+                            <img src="./uploads/icon/思微LOGO.png" class="logo" alt="" title="">
+                            <span class="navmobile ml-5">
+                                <a target="_blank" href="index.php"><img src="./uploads/toptitle/Home.png" class="toptitle" alt=""></a>
+                                <a target="_blank" href="work.html"><img src="./uploads/toptitle/Works_white.png" class="toptitle" alt=""></a>
+                                <a target="_blank" href="Blog.php"><img src="./uploads/toptitle/Blog.png" class="toptitle" alt=""></a>
+                            </span>
+                        </div>
+                    </header>
+                    <button class="navbar-toggler ml-auto" type="button" onclick="openNav()">
+                        <span class="navbar-toggler-icon"><img src="./uploads/icon/漢堡.png" width="30px"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav text-right">
+                            <li class="nav-item navmobilenon">
+                                <a active target="_blank" href="index.html"><img src="./uploads/toptitle/Home.png" class="toptitle"
+                                        alt=""></a>
+                            </li>
+                            <li class="nav-item navmobilenon">
+                                <a target="_blank" href="work.html"><img src="./uploads/toptitle/Works_white.png" class="toptitle"
+                                        alt=""></a>
+                            </li>
+                            <li class="nav-item navmobilenon">
+                                <a target="_blank" href="blog.html"><img src="./uploads/toptitle/Blog.png" class="toptitle"
+                                        alt=""></a>
+                            </li>
+                            <li class="nav-item">
+                                <a target="_blank" href="ebook.html"><img src="./uploads/toptitle/Ebook.png" class="toptitle"
+                                        alt=""></a>
+                            </li>
+                            <li class="nav-item">
+                                <a target="_blank" href="customers.html"><img src="./uploads/toptitle/Customers.png" class="toptitle"
+                                        alt=""></a>
+                            </li>
+                            <li class="nav-item">
+                                <a target="_blank" href="about us.html"><img src="./uploads/toptitle/About us.png" class="toptitle"
+                                        alt=""></a>
+                            </li>
+                            <li class="nav-item d-lg-none">
+                                <a target="_blank" href="javascript:void(0)" class="nav-link closeBtn" onclick="closeNav()">&times;</a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </section>
+    <img class="topimg" src="./uploads/works/Sketch.jpg" alt="">
+    <div class="works">
+        <div class="container-fluid">
+
+            <div class="row">
+                <div class="col-lg-8 col-12 bg-dark" style="height: 350px;"></div>
+                <div class="col-lg-4 col-12">44654654</div>
+
+                <div class="col-lg-6 col-12 bg-success" style="height: 350px;"></div>
+                <div class="col-lg-6 col-12 bg-info" style="height: 350px;"></div>
+
+                <div class="col-lg-4 col-12 bg-primary" style="height: 350px;"></div>
+                <div class="col-lg-8 col-12">44654654</div>
+            </div>
+        </div>
+    </div>
+    <div class="more mt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-lg-12 text-center">
+                    <h3>
+                        < 延伸閱讀>
+                    </h3>
+                </div>
+                <div class="col-lg-6">
+                    <img class="rounded mx-auto d-block moreimg" src="./uploads/works/Sketch.jpg" alt="">
+                    <h3 class="pl-3">title</h3>
+                    <div class="pl-3">
+                        contentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontent
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <img class="rounded mx-auto d-block moreimg" src="./uploads/works/Sketch.jpg" alt="">
+                    <h3 class="pl-3">title</h3>
+                    <div class="pl-3">
+                        contentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontent
+                    </div>
+                </div>
+                <div class="col-lg-6 col-12">
+                    <div class="morebtn"><button style="background-color: #0092FF;">分享至臉書</button></div>
+                </div>
+                <div class="col-lg-6 col-12">
+                    <div class="morebtn"><button style="background-color: #D69F72;">看看我們的設計案例</button></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="detial">
+        <div class="container" style="padding-top: 100px;">
+            <div class="row">
+                <div class="col-12 text-center inputtop">訂閱電子報 : 想獲取最新的產品開發知識嗎 ? 我們將第一時間 , 發到您的信箱 .</div>
+                <div class="col-lg-2 inputText"><img src="./uploads/detail/Name.png" alt=""></div>
+                <div class="inputPadding col-lg-4"><input type="text" class="form-control" name="Name" id="Name"></div>
+                <div class="col-lg-2 inputText"><img src="./uploads/detail/Mail.png" alt=""></div>
+                <div class="inputPadding col-lg-4"><input type="text" class="form-control" name="Mail" id="Mail"></div>
+                <div class="col-12 text-center" style="padding-bottom: 75px;"><input id="send" type="submit" value="Submit"></div>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-lg-3"><img src="./uploads/icon/icon-phone.png" class="icon" alt=""> 886 975 862
+                    657</div>
+                <div class="col-12 col-lg-4"><img src="./uploads/icon/icon-mail.png" class="icon" alt="">
+                    iian@svplusdesign.com</div>
+                <div class="col-12 col-lg-2"><img src="./uploads/icon/icon-line.png" class="icon" alt=""> iiandesign
+                </div>
+                <div class="col-12 col-lg-3"><img src="./uploads/icon/icon-chat.png" class="icon" alt=""> iiandesign
+                </div>
+                <div class="col-12"><img src="./uploads/icon/icon-map.png" class="icon" alt=""> 3F., No.46, Yixian Rd.,
+                    Xinyi Dist., Taipei Dist., Taipei City 104, Taiwan ( R.O.C.)</div>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    // navbar背景
+    $(window).scroll(function () {
+        if ($(window).scrollTop() >= 30) {
+            $('#navbarBg')
+                .fadeIn()
+                .addClass('navbarBg');
+        } else {
+            $('#navbarBg').fadeOut();
+        }
+    });
+    // navbar button onclick open
+    function openNav() {
+        $("#navbarSupportedContent").addClass("sideNav");
+        $("#navbarSupportedContent").removeClass("collapse", "navbar-collapse");
+        setTimeout(function () {
+            $("#navbarSupportedContent").width(180);
+        }, 30);
+
+        if ($("#navbarSupportedContent").hasClass('sideNav')) {
+            $(document).click(function (e) {
+                var _con = $('.sideNav'); // 设置目标区域
+                if (!_con.is(e.target) && _con.has(e.target).length === 0) {
+                    $("#navbarSupportedContent").width(0);
+                }
+            });
+        }
+    }
+    // navbar button onclick close
+    function closeNav() {
+        if ($(window).width() < 767) { }
+        $("#navbarSupportedContent").width(0);
+
+        setTimeout(function () {
+            $("#navbarSupportedContent").removeClass("sideNav");
+            $("#navbarSupportedContent").addClass("collapse", "navbar-collapse");
+        }, 500);
+
+    }
+    // navbar screen chang class
+    $(document).ready(function () {
+        $(window).resize(function () {
+            wdth = $(window).width();
+
+            if (wdth < 992) {
+                $("#navbarSupportedContent").removeClass("collapse", "navbar-collapse").addClass("sideNav");
+            } else {
+                closeNav();
+            }
+        });
+    });
+</script>
+<script>
+    $("#send").on("click", function () {
+        if ($("#Name").val() == "" || $("#Mail").val() == "" ) {
+            if ($("#Name").val() == "") {
+                $("#Name").addClass("isNon");
+                $("#Name").attr('placeholder', 'Please Enter');
+            } else {
+                $("#Name").removeClass("isNon");
+            }
+
+            if ($("#Mail").val() == "" ) {
+                $("#Mail").addClass("isNon");
+                $("#Mail").attr('placeholder', 'Please Enter');
+            } else {
+                $("#Mail").removeClass("isNon");
+            }
+        } else {
+            $("#Name").removeClass("isNon");
+            $("#Mail").removeClass("isNon");
+            $(".backdrop").removeClass("backnon");
+            setTimeout(function(){ $(".backdrop").addClass("backnon"); }, 2000);
+        }
+
+    })
+</script>
+</html>
